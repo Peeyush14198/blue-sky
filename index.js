@@ -20,7 +20,7 @@ firebaseAdmin.initializeApp({
 
 const app = express();
 app.use(cors());
-
+const port = process.env.PORT;
 
 app.get('/countries', async (req, res) => {
     res.send(await countriesListController(req, res));
@@ -53,7 +53,7 @@ app.get('/country/:name', async (req, res) => {
 
 });
 
-app.listen(9000, () => {
+app.listen(port, () => {
 
 })
 
