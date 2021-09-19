@@ -1,0 +1,4 @@
+node_modules/
+.env
+greenhouse_gas_inventory_data_data 2.csv
+eco-backend-69b6c-firebase-adminsdk-87qtn-1fe868778e.json
