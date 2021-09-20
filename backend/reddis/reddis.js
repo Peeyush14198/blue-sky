@@ -10,7 +10,7 @@ const util = require('util');
 
 function setDataInRedis(key, value) {
     redisClient.set(key, value);
-    redisClient.expire(key, 100);
+    redisClient.expire(key, 10000);
     return true;
 
 }

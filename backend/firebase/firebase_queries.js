@@ -18,7 +18,7 @@ const getCountriesListFromFirebase = async () => {
 
 const getfilterCountryFromFirebase = async (nameToSearch) => {
     try {
-        const countryList = await (await admin.firestore().collection('greenhouse').where('country_or_area', '==' , nameToSearch).orderBy('year').get()).docs;
+        const countryList = await (await admin.firestore().collection('greenhouse').where('country_or_area', '==' , nameToSearch).get()).docs;
         let returnableList = [];
         countryList.forEach((e) => {
             returnableList.push({

@@ -7,7 +7,7 @@ const fs = require('fs')
 const csv = require('csv-parser')
 var firebaseAdmin = require("firebase-admin");
 require("dotenv").config();
-var serviceAccount = require('./eco-backend-69b6c-firebase-adminsdk-87qtn-1fe868778e.json');
+var serviceAccount = require('./frogbit-55de5-firebase-adminsdk-tc7zl-0ec0111f1c.json');
 const {
     countriesListController,
     filterCountryController
@@ -54,7 +54,17 @@ app.get('/country/:name', async (req, res) => {
 });
 
 app.listen(port, () => {
-
+    // fs.createReadStream('./greenhouse_gas_inventory_data_data 2.csv')
+    //   .pipe(csv())
+    //   .on('data', function (row) {
+    //     firebaseAdmin.firestore().collection('greenhouse').add({
+    //         ...row
+    //     })
+    //   })
+    //   .on('end', function () {
+    //     //   console.table(users)
+    //       // TODO: SAVE users data to another file
+    //     })
 })
 
 module.exports = {
